@@ -1,13 +1,11 @@
 def fib(number):
-    a = 0
+    a =  0
     b = 1
-    result = []
     for i in range(number):
-        result.append(a)
+        yield a
         temp = a
         a = b
         b = temp + b
-    return result
 
-
-print(fib(21))
+for x in fib(100):
+    print(x)
